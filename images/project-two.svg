@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" role="img" aria-label="Weather Dashboard screenshot placeholder">
+  <rect width="600" height="400" fill="#d6f0e0"/>
+  <rect x="0" y="0" width="600" height="40" fill="#1f2933" opacity="0.85"/>
+  <circle cx="24" cy="20" r="6" fill="#f7f7f5"/><circle cx="44" cy="20" r="6" fill="#f7f7f5"/><circle cx="64" cy="20" r="6" fill="#f7f7f5"/>
+  <text x="300" y="215" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#1f2933" text-anchor="middle">Weather Dashboard</text>
+  <text x="300" y="260" font-family="system-ui, Segoe UI, Arial, sans-serif" font-size="20" fill="#1f2933" text-anchor="middle">Screenshot placeholder</text>
+</svg>

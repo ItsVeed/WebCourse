@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Web Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name, a web developer building accessible, responsive websites and applications with HTML, CSS, and JavaScript.">
+  <meta name="author" content="Your Name">
+
+  <meta property="og:title" content="Your Name | Web Developer Portfolio">
+  <meta property="og:description" content="Accessible, responsive web projects by Your Name.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Your Name</h1>
+    <p>Web Developer</p>
+    <nav role="navigation" aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="about-me" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <img src="images/profile.svg" alt="Portrait of Your Name smiling in front of a bookshelf" width="200" height="200">
+      <p>
+        Hi, I'm Your Name, a web developer who enjoys turning ideas into clean,
+        accessible, and responsive websites. I care about writing semantic code,
+        building inclusive experiences, and continually learning new tools and techniques.
+      </p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
+      <div class="project-filters" role="group" aria-label="Filter projects by category">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
+        <button type="button" data-filter="api" aria-pressed="false">API</button>
+        <button type="button" data-filter="design" aria-pressed="false">Design</button>
+      </div>
+      <p id="filter-status" class="visually-hidden" aria-live="polite"></p>
+
+      <article data-category="javascript">
+        <h3>Project One: Task Manager App</h3>
+        <figure>
+          <button type="button" class="lightbox-trigger" aria-label="Enlarge screenshot of the Task Manager app">
+            <img src="images/project-one.svg" alt="Screenshot of the Task Manager app showing a to-do list with completed and pending tasks" width="600" height="400" loading="lazy">
+          </button>
+          <figcaption>Task Manager dashboard view</figcaption>
+        </figure>
+        <p>A simple task manager that lets users add, complete, and filter tasks. Built with HTML, CSS, and JavaScript, with data saved in the browser.</p>
+        <p>
+          <a href="#">View Task Manager live demo</a> |
+          <a href="#">View Task Manager source code</a>
+        </p>
+      </article>
+
+      <article data-category="javascript api">
+        <h3>Project Two: Weather Dashboard</h3>
+        <figure>
+          <button type="button" class="lightbox-trigger" aria-label="Enlarge screenshot of the Weather Dashboard">
+            <img src="images/project-two.svg" alt="Screenshot of the Weather Dashboard displaying a five-day forecast with temperature and weather icons" width="600" height="400" loading="lazy">
+          </button>
+          <figcaption>Five-day forecast in the Weather Dashboard</figcaption>
+        </figure>
+        <p>A responsive dashboard that fetches live weather data from a public API and displays current conditions and a five-day forecast.</p>
+        <p>
+          <a href="#">View Weather Dashboard live demo</a> |
+          <a href="#">View Weather Dashboard source code</a>
+        </p>
+      </article>
+
+      <article data-category="design">
+        <h3>Project Three: Restaurant Landing Page</h3>
+        <figure>
+          <button type="button" class="lightbox-trigger" aria-label="Enlarge screenshot of the Restaurant Landing Page">
+            <img src="images/project-three.svg" alt="Screenshot of a restaurant landing page with a hero image of plated food and a reservation button" width="600" height="400" loading="lazy">
+          </button>
+          <figcaption>Restaurant landing page hero section</figcaption>
+        </figure>
+        <p>A mobile-first landing page for a local restaurant featuring a menu, opening hours, and an accessible reservation form.</p>
+        <p>
+          <a href="#">View Restaurant Landing Page live demo</a> |
+          <a href="#">View Restaurant Landing Page source code</a>
+        </p>
+      </article>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Responsive Design</li>
+        <li>Web Accessibility (WCAG)</li>
+        <li>Git &amp; GitHub</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>SEO Fundamentals</li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Have a question or want to work together? Send me a message.</p>
+      <form action="#" method="post" novalidate>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+          <p class="error-message" id="name-error"></p>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+          <p class="error-message" id="email-error"></p>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+          <p class="error-message" id="message-error"></p>
+        </div>
+        <button type="submit">Send Message</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Your Name. All rights reserved.</p>
+    <ul>
+      <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" aria-label="Your Name on GitHub (opens in a new tab)">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer" aria-label="Your Name on LinkedIn (opens in a new tab)">LinkedIn</a></li>
+      <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
+    </ul>
+  </footer>
+
+  <dialog id="lightbox" aria-label="Image preview">
+    <button type="button" class="lightbox-close" aria-label="Close image preview">&times;</button>
+    <img src="images/project-one.svg" alt="">
+    <p class="lightbox-caption"></p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
